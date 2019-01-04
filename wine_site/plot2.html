@@ -12,7 +12,9 @@
  <!-- Latest compiled and minified JavaScript -->
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 
-  <link rel="stylesheet" type="text/css" href="static/css/style.css">
+  <link rel="stylesheet" type="text/css" href="style.css">
+
+  <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
 
 </head>
 <body style="background-color: rgb(102, 22, 22)">
@@ -52,41 +54,25 @@
 </nav>
   <div class="container-fluid">
     <div class="row">
-      <div class="col-md-1"></div>
-      <div class="col-md-12">
+      <div class="col-md-2"></div>
+
+      <div class="col-md-8">
 
           <div class="panel panel-default">
               <div class="panel-body">
-                <h2>Data</h2>
+                <h2>Price vs Rating</h2>
                 <hr>
                 
-                <img class = "img-responsive" src="assets/wine1.png" style="width:40%; float: left; margin: 5px;" alt="first image" >
-                <h3>Datasets</h3>
-                <p>
-                Our main dataset was from Kaggle and the data was scraped from <a href="https://www.winemag.com/"> WineEnthusiast</a> in November 2017. This dataset included 130k reviews of wine. Attributes of each review are the following:
-                <br><br>
-                <b>Country</b> - The country that the wine is from <br>
-                <b>Description</b> - The free-form text of the review<br>
-                <b>Designation</b> - The vineyard within the winery where the grapes that made the wine are from <br>
-                <b>Points</b> - The number of points WineEnthusiast rated the wine on a scale of 1-100 <br>
-                <b>Price</b> - The cost for a bottle of the wine<br>
-                <b>Province</b> - The province or state that the wine is from<br>
-                <b>Region_1</b> - The wine growing area in a province or state<br>
-                <b>Region_2</b> - Sometimes there are more specific regions specified within a wine growing area (ie Rutherford inside the Napa Valley), but this value can sometimes be blank <br>
-                <b>Taster_name</b><br>
-                <b>Taster_twitter_handle</b><br>
-                <b>Title</b> - The title of the wine review, which often contains the vintage if you're interested in extracting that feature <br>
-                <b>Variety</b> - The type of grapes used to make the wine<br>
-                <b>Winery</b> - The winery that made the wine
-                </p>
-                <hr>
-                <h3>Data Cleaning Process</h3>
-<p> [INSERT EXPLANATION OF CLEANING PROCESS].</p>
-                </p>
+                <div id="plot"></div>
+                <script src="static/js/price_data.js"></script>
+                <script src="static/js/price_plot.js"></script>
+
               </div>
-            </div>          
-    </div>
-    <div class="col-md-1"></div>
+            </div>
+
+      </div>
+    
+    <div class="col-md-2"></div>
 
   </div>
 </div>

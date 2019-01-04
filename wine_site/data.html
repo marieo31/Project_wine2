@@ -84,12 +84,7 @@
                 <b>Variety</b> - The type of grapes used to make the wine<br>
                 <b>Winery</b> - The winery that made the wine
                 </p>
-                <hr>
-                <h3>Data Cleaning Process</h3>
-                <p>The original dataset was processed to extract the year value from the wine description: using Python regex expression.</p>                
-                <p>The dataset was also sampled to reflect the annual production, resulting into 3 reduced dataset of 23k, 5k and 1k rows.</p>
                 
-
 
                 <!-- <div class="panel panel-primary">
                   <div class="panel-heading">
@@ -102,16 +97,32 @@
               </div>
             </div>          
     </div>
-    <div class="col-md-1"></div>
-    <div class="panel panel-default">
-      <div class="panel-body">
-        
-        <div id="plot_datasets_prod"></div>
-        <script src="data/datasets_vs_production.js"></script>
-        <script src="static/js/data_plot_dataset_prod.js"></script>
 
-      </div>
+    <div class="col-md-1"></div>
+
+    <div class="col-md-12">
+        <div class="panel panel-default">
+            <div class="panel-body">
+
+                <hr>
+                <h3>Data Cleaning Process</h3>
+                <p>The original dataset was processed to extract the year value from the wine description: using Python regex expression.</p>                
+                <p>The dataset was also sampled to reflect the annual production, resulting into 3 reduced dataset of 23k, 5k and 1k rows.</p>
+                <br><br>
+              
+              <div id="plot_datasets_prod"></div>
+              <script src="data/datasets_vs_production.js"></script>
+              <script src="static/js/data_plot_dataset_prod.js"></script>
+      
+            </div>
+          </div>
+
+
+
+
     </div>
+
+
 
 
 

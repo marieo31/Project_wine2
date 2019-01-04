@@ -11,9 +11,12 @@
  <script src="https://code.jquery.com/jquery-3.3.1.js"   integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="   crossorigin="anonymous"></script>
  <!-- Latest compiled and minified JavaScript -->
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <!-- d3 JavaScript -->
+    <script src="https://d3js.org/d3.v4.min.js"></script>
 
   <link rel="stylesheet" type="text/css" href="static/css/style.css">
 
+  <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
 </head>
 <body style="background-color: rgb(102, 22, 22)">
   <nav class="navbar navbar-default">
@@ -83,12 +86,11 @@
                 </p>
                 <hr>
                 <h3>Data Cleaning Process</h3>
+                <p>The original dataset was processed to extract the year value from the wine description: using Python regex expression.</p>                
+                <p>The dataset was also sampled to reflect the annual production, resulting into 3 reduced dataset of 23k, 5k and 1k rows.</p>
                 
-                <ul>
-                  <li>Coffee</li>
-                  <li>Tea</li>
-                  <li>Milk</li>
-                </ul>
+
+
                 <!-- <div class="panel panel-primary">
                   <div class="panel-heading">
                     <h3 class="panel-title">Sample MetaData</h3>
@@ -101,6 +103,17 @@
             </div>          
     </div>
     <div class="col-md-1"></div>
+    <div class="panel panel-default">
+      <div class="panel-body">
+        
+        <div id="plot_datasets_prod"></div>
+        <script src="data/datasets_vs_production.js"></script>
+        <script src="static/js/data_plot_dataset_prod.js"></script>
+
+      </div>
+    </div>
+
+
 
   </div>
 </div>

@@ -13,45 +13,45 @@ console.log(data)
 // var sum = prod.reduce((a, b) => a + b, 0);
 // var prod2 = prod.map(pp => pp/sum*100)
 
-// // Creating the traces
-// var trace1 = {
-//     x: data[0].prices,
-//     y: data[0].prices_dist,
-//     name: 'Full dataset',
-//     type: 'bar'
-//   };
+// Creating the traces
+var trace1 = {
+    x: data.country,
+    y: data["23k dataset"],
+    name: '23k dataset',
+    type: 'bar'
+  };
 
   
-// var trace2 = {
-//     x: data[1].prices,
-//     y: data[1].prices_dist,
-//     name: '23k rows',
-//     type: 'bar'
-//   };
+var trace2 = {
+    x: data.country,
+    y: data["Best values"],
+    name: 'Best values',
+    type: 'bar'
+  };
 
-// var trace3 = {
-//     x: data[2].prices,
-//     y: data[2].prices_dist,
-//     name: '5k rows',
-//     type: 'bar'
-//   };
+var trace3 = {
+    x: data.country,
+    y: data["Worst values"],
+    name: 'Worst values',
+    type: 'bar'
+  };
 
 
 
-//   var data_plot = [trace1, trace2, trace3];
-//   console.log(data_plot)
+  var data_plot = [trace1,trace3, trace2 ];
+  console.log(data_plot)
 
-//   var layout = { title:{
-//                     text: "Price distribution for the datasets"
-//                 },
-//                 // yaxis:{
-//                 //     title:{
-//                 //         text: "Distribution"
-//                 //     }
-//                 // }
-//             };
+  var layout = { title:{
+                    text: "Best and worst values"
+                },
+                yaxis:{
+                    title:{
+                        text: "% per country"
+                    }
+                }
+            };
   
-//   Plotly.newPlot('plot_datasets_distrib_price', data_plot, layout);
+  Plotly.newPlot('best_worst_plot', data_plot, layout);
 
 
  

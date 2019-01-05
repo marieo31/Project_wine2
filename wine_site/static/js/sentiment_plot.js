@@ -26,10 +26,10 @@
     y: sent.compound,
     mode: "markers",
     type: "scatter",
-    name: "PriceComp",
+    name: "ScoreComp",
     marker: {
       color: "red",
-      symbol: "hexagram"
+      symbol: "circle"
     }
   };
   priceDat= [trace2]
@@ -65,54 +65,46 @@
   // Plot the chart to a div tag with id "plot"
   Plotly.newPlot("plot3", priceDa, layout);
 
-
-
-
-
-  var trace4 = {
-    x: avgg.User,
-    y: avgg.Price_Avg,
-    name: 'Price Average',
-    marker: {color: 'rgb(55, 83, 109)'},
-    type: 'bar'
-  };
+//   var trace4 = {
+//     x: avgg.User,
+//     y: avgg.Price_Avg,
+//     name: 'Average Price',
+//     marker: {color: 'rgb(55, 83, 109)'},
+//     type: 'bar'
+//   };
   
-  var trace5 = {
-    x: avgg.User,
-    y: avgg.Rating_Avg,
-    name: 'Rating Average',
-    marker: {color: 'rgb(26, 118, 255)'},
-    type: 'bar'
-  };
+//   var trace5 = {
+//     x: avgg.User,
+//     y: avgg.Rating_Avg,
+//     name: 'Average Rating',
+//     yaxis: 'y2',
+//     marker: {color: 'rgb(26, 118, 255)'},
+//     type: 'bar'
+//   };
   
-  var datam = [trace4, trace5];
+//   var datam = [trace4, trace5];
   
-  var layout = {
-    title: 'Average Price and Rating per Taster',
-    xaxis: {tickfont: {
-        size: 14,
-        color: 'rgb(107, 107, 107)'
-      }},
-    yaxis: {
-      title: 'Average',
-      titlefont: {
-        size: 16,
-        color: 'rgb(107, 107, 107)'
-      },
-      tickfont: {
-        size: 14,
-        color: 'rgb(107, 107, 107)'
-      }
-    },
-    legend: {
-      x: 0,
-      y: 1.0,
-      bgcolor: 'rgba(255, 255, 255, 0)',
-      bordercolor: 'rgba(255, 255, 255, 0)'
-    },
-    barmode: 'group',
-    bargap: 0.15,
-    bargroupgap: 0.1
-  };
+//   var layout = {
+//     title: 'Average Price and Rating per Taster',
+//     xaxis: {tickfont: {size: 14,color: 'rgb(107, 107, 107)'}},
+//     yaxis: {title: 'Average Price'},
+//     yaxis2: {
+//       title: 'Average Rating',
+//       titlefont: {size: 16,color: 'rgb(107, 107, 107)'},
+//       tickfont: {size: 14,color: 'rgb(107, 107, 107)'},
+//     //   overlaying: 'y',
+//       side: 'right'
+    
+// },
+//     legend: {
+//       x: 0,
+//       y: 1.0,
+//       bgcolor: 'rgba(255, 255, 255, 0)',
+//       bordercolor: 'rgba(255, 255, 255, 0)'
+//     },
+//     barmode: 'group',
+//     bargap: 0.15,
+//     bargroupgap: 0.1
+//   };
   
-  Plotly.newPlot('plot4', datam, layout);
+//   Plotly.newPlot('plot4', datam, layout);

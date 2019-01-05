@@ -108,18 +108,26 @@
                 <h3>Data Cleaning Process</h3>
                 <p>The original dataset was processed to extract the year value from the wine description: using Python regex expression.</p>                
                 <p>The dataset was also sampled to reflect the annual production, resulting into 3 reduced dataset of 23k, 5k and 1k rows.</p>
+                <p>The p-values for price and score values are:
+                  <ul>
+                    <li>Full dataset vs. 23k:  <b>5e-8 and 3e-32</b> </li>
+                    <li>23k vs. 5k: <b>0.8 and 0.16</b> </li>
+                    <li>23k vs. 1k: <b>0.3 and 0.4</b> </li>
+                  </ul>    
+                  Strong effect of the sampling by production. Good representativity of the smaller samples.              
+                </p>
                 <br><br>
               
               <div id="plot_datasets_prod"></div>
               <script src="data/datasets_vs_production.js"></script>
               <script src="static/js/data_plot_dataset_prod.js"></script>
 
-              <div class="col-md-6">
+              <!-- <div class="col-md-6"> -->
                   <div id="plot_datasets_distrib_price"></div>
-              </div>       
-              <div class="col-md-6">
+              <!-- </div>       
+              <div class="col-md-6"> -->
                   <div id="plot_datasets_distrib_score"></div>
-              </div>         
+              <!-- </div>          -->
               <script src="data/datasets_distributions.js"></script>
               <script src="static/js/data_plot_dataset_distrib.js"></script>
       
